@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <form class="calculator">
+    <input type="text" value="0" readonly class="result js-result"/>
+    <div class="numbers js-numbers">
+      <button type="button" class="digit">7</button>
+      <button type="button" class="digit">8</button>
+      <button type="button" class="digit">9</button>
+      <button type="button" class="operator">+</button>
+      <button type="button" class="digit">4</button>
+      <button type="button" class="digit">5</button>
+      <button type="button" class="digit">6</button>
+      <button type="button" class="operator">-</button>
+      <button type="button" class="digit">1</button>
+      <button type="button" class="digit">2</button>
+      <button type="button" class="digit">3</button>
+      <button type="button" class="operator">*</button>
+      <button type="button" class="digit">0</button>
+      <button type="button" class="digit">.</button>
+      <button type="button" class="operator">/</button>
+      <button type="button" class="finish">=</button>
+    </div>
+    <div class="buttons__addition">
+      <button type="button" class="clear">Clear</button>
+      <button type="button" class="clear__storage">Clear History</button>
+    </div>
+
+  </form>
+
+  <div class="history">
+    <h3>История вычислений<br/>Для IP: <b class="js-ip"></b></h3>
+    <ul>
+    </ul>
+  </div>
+</div>
+<template id="temp">
+  <li></li>
+</template>
+<script src="js/calculator.js"></script>
+<script src="js/clearInput.js"></script>
+<script src="js/fromKeyBoard.js"></script>
+<script src="js/makeEvaluation.js"></script>
+<script src="js/calculatorConditions.js"></script>
+<script type="application/javascript" src="js/IPcheck.js"></script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<script src="js/renderHistory.js"></script>
+</body>
+</html>
